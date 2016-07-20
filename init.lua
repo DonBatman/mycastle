@@ -205,8 +205,7 @@ doors.register_door("castle:oak_door", {
 	description = "Oak Door",
 	inventory_image = "castle_oak_door_inv.png",
 	groups = {choppy=2,door=1},
-	tiles_bottom = {"castle_oak_door_bottom.png", "door_oak.png"},
-	tiles_top = {"castle_oak_door_top.png", "door_oak.png"},
+	tiles = {"castle_door_oak.png"},
 	only_placer_can_open = true,
 })
 
@@ -214,8 +213,7 @@ doors.register_door("castle:jail_door", {
 	description = "Jail Door",
 	inventory_image = "castle_jail_door_inv.png",
 	groups = {cracky=2,door=1},
-	tiles_bottom = {"castle_jail_door_bottom.png", "door_jail.png"},
-	tiles_top = {"castle_jail_door_top.png", "door_jail.png"},
+	tiles = {"castle_door_jail.png"},
 	only_placer_can_open = true,
 })
 
