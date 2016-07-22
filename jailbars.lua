@@ -1,5 +1,6 @@
 -- xjailbarss mod by xyz
 
+
 local function rshift(x, by)
   return math.floor(x / 2 ^ by)
 end
@@ -88,7 +89,14 @@ for i = 1, 15 do
             fixed = take
         }
     })
+
+	--register aliases if changing from an xpane version
+
+	minetest.register_alias("xpane:jailbars","castle:jailbars")
+	minetest.register_alias("xpane:jailbars_"..sum,"castle:jailbars_"..sum)
 end
+
+
 
 minetest.register_node("castle:jailbars", {
     description = "Jailbars",
