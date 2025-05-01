@@ -90,11 +90,40 @@ minetest.register_node("mycastle:wall_covering", {
 	description = "Wall Covering",
 	tiles = {
 			"wool_red.png",
-			"wool_red.png",
-			"wool_red.png",
-			"wool_red.png",
-			"wool_red.png",
-			"wool_red.png",
+			},
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2, oddly_breakable_by_hand = 2},
+	
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, 0.4375, 0.5, 0.5, 0.5},
+		},
+	}
+})
+minetest.register_node("mycastle:wall_covering2", {
+	description = "Wall Covering",
+	tiles = {
+			"wool_blue.png",
+			},
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2, oddly_breakable_by_hand = 2},
+	
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, 0.4375, 0.5, 0.5, 0.5},
+		},
+	}
+})
+minetest.register_node("mycastle:wall_covering3", {
+	description = "Wall Covering",
+	tiles = {
+			"wool_black.png",
 			},
 	drawtype = "nodebox",
 	paramtype = "light",

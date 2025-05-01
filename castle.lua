@@ -274,7 +274,12 @@ minetest.register_node("mycastle:fence_top", {
 minetest.register_node("mycastle:shield", {
 	description = "Shield",
 	tiles = {
-			"mycastle_shield.png",
+			"mycastle_shield.png^[transformR90",
+			"mycastle_shield2.png",
+			"mycastle_shield2.png",
+			"mycastle_shield2.png",
+			"mycastle_shield2.png",
+			"mycastle_shield2.png",
 			},
 	drawtype = "nodebox",
 	paramtype = "light",
@@ -300,7 +305,12 @@ minetest.register_node("mycastle:shield", {
 minetest.register_node("mycastle:sword", {
 	description = "Sword",
 	tiles = {
-			"mycastle_shield.png",
+			"mycastle_sword.png^[transformR90",
+			"mycastle_sword.png^[transformR90",
+			"mycastle_sword.png",
+			"mycastle_sword.png^[transformR180",
+			"mycastle_sword.png^[transformR270",
+			"mycastle_sword.png^[transformR90",
 			},
 	drawtype = "nodebox",
 	paramtype = "light",

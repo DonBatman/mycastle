@@ -1,13 +1,55 @@
-minetest.register_node("mycastle:grey_stone", {
-	description = "Grey Stone",
+local stone_table = {
+					{"big_dark_stone","Big Dark Stone"},
+					{"block","Block"},
+					{"brick","Brick"},
+					{"brick2","Brick 2"},
+					{"brick_small","Small Brick"},
+					{"checplate","Checker Plate"},
+					{"cobble","Cobble"},
+					{"dark_block","Dark Block"},
+					{"dark_brick","Dark Brick"},
+					{"dark_brick2","Dark Brick 2"},
+					{"dark_brick_small","Small Dark Brick"},
+					{"dark_cobble","Dark Cobble"},
+					{"dark_fancy_block","Dark Fancy Block"},
+					{"dark_hsplit","Dark Horizontal Split"},
+					{"dark_squares","Dark Squares"},
+					{"dark_squares_small","Small Dark Squares"},
+					{"dark_vsplit","Dark Vertical Split"},
+					{"fancy_block","Fancy Block"},
+					{"hsplit","Horizontal Split"},
+					{"pavers","Pavers"},
+					{"red_block","Red Block"},
+					{"red_brick","Red Brick"},
+					{"red_brick2","Red Brick 2"},
+					{"red_brick_small","Small Red Brick"},
+					{"red_cobble","Red Cobble"},
+					{"red_fancy_block","Red Fancy Block"},
+					{"red_hsplit","Red Horizontal Split"},
+					{"red_vsplit","Red Vertical Split"},
+					{"squares","Squares"},
+					{"squares_small","Small Squares"},
+					{"vsplit","Vertical Split"},
+					{"black_cobble","Black Cobble"},
+					{"white_cobble","White Cobble"},
+					{"tan_cobble","Tan Cobble"},
+					}
+for i in ipairs(stone_table) do
+	local nam = stone_table[i][1]
+	local des = stone_table[i][2]
+
+minetest.register_node("mycastle:"..nam, {
+	description = des,
 	tiles = {
-			"mycastle_grey_stone.png",
+			"mycastle_"..nam..".png",
 			},
 	drawtype = "normal",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
 })
+end
+--[[
 minetest.register_node("mycastle:dark_stone", {
 	description = "Dark Stone",
 	tiles = {
@@ -106,8 +148,8 @@ minetest.register_node("mycastle:checker_plate", {
 	paramtype = "light",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
 })
-minetest.register_node("mycastle:dark_cobble", {
-	description = "Dark Cobble",
+minetest.register_node("mycastle:black_cobble", {
+	description = "Black Cobble",
 	tiles = {
 			"mycastle_dark_cobble.png",
 			},
@@ -133,6 +175,7 @@ minetest.register_node("mycastle:white_cobble", {
 	paramtype = "light",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
 })
+--
 minetest.register_node("mycastle:cobble_corner", {
 	description = "Cobble Corner",
 	tiles = {
@@ -163,3 +206,5 @@ minetest.register_node("mycastle:cobble_corner2", {
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
 })
+
+--]]
