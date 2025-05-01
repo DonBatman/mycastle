@@ -1,5 +1,5 @@
 # mycastle
-Castle blocks foe luanti
+Castle blocks for luanti
 
 This is a work in progress. Expect changes!
 
