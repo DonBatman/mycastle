@@ -1,12 +1,3 @@
--- Fake Lava by Batman --
---===========================================
-
---
--- register nodes:
---
-
--- Not Walkable Fake Lava
-
 minetest.register_node("mycastle:flava", {
 	description = "Fake Lava",
 	drawtype = "normal",
@@ -43,12 +34,8 @@ minetest.register_node("mycastle:flava_w", {
 
 })
 
+-- crafting recipes:
 
-	
-
---
--- register crafting recipes:
---
 minetest.register_craft({
 	output = 'mycastle:flava',
 	recipe = {

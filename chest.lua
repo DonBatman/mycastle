@@ -1,9 +1,9 @@
 function minetest.get_myfurniture_formspec(pos)
     local spos = pos.x .. "," .. pos.y .. "," ..pos.z
     local formspec =
-        "size[9,8]"..
-        "list[nodemeta:".. spos .. ";main;0.5,0.5;8,3;]"..
-        "list[current_player;main;0.5,5;8,4;]"
+        "size[10,11]"..
+        "list[nodemeta:".. spos .. ";main;1,1;8,4;]"..
+        "list[current_player;main;1,6;8,4;]"
     return formspec
 end
 
@@ -23,7 +23,7 @@ minetest.register_node("mycastle:chest", {
         meta:set_string("infotext", "Chest")
         meta:set_string("owner", "")
         local inv = meta:get_inventory()
-        inv:set_size("main", 9*7)
+        inv:set_size("main", 8*4)
     end,
 
     can_dig = function(pos,player)
@@ -62,4 +62,12 @@ minetest.register_node("mycastle:chest", {
                 minetest.get_myfurniture_formspec(pos)
             )
     end,
+})
+core.register_craft({
+	output = "mycastle:chest",
+	recipe = {
+			{"mycastle:castle_wood","mycastle:castle_wood","mycastle:castle_wood"},
+			{"mycastle:castle_wood","","mycastle:castle_wood"},
+			{"mycastle:castle_wood","mycastle:castle_wood","mycastle:castle_wood"},
+			}
 })
