@@ -546,3 +546,95 @@ core.register_craft({
 			{"default:paper","",""},
 			}
 })
+
+minetest.register_node("mycastle:stairs", {
+	description = "Stairs",
+	drawtype = "nodebox",
+	tiles = {
+			"mycastle_wood.png^[transformR90",
+			"mycastle_wood.png",
+			"mycastle_wood.png",
+			"mycastle_wood.png",
+			"mycastle_wood.png",
+			"mycastle_wood.png",
+			},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	sunlight_propagates = true,
+	groups = {cracky=2},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.375, -0.5, 0.5, -0.3125, -0.1875},
+			{-0.5, -0.125, -0.1875, 0.5, -0.0625, 0.125},
+			{-0.5, 0.125, 0.125, 0.5, 0.1875, 0.5},
+			{-0.375, -0.5, 0.1875, -0.3125, 0.1875, 0.4375},
+			{0.3125, -0.5, 0.1875, 0.375, 0.1875, 0.4375},
+			{0.3125, -0.5, -0.125, 0.375, -0.0625, 0.1875},
+			{-0.375, -0.5, -0.125, -0.3125, -0.0625, 0.1875},
+			{-0.375, -0.5, -0.4375, -0.3125, -0.375, -0.125},
+			{0.3125, -0.5, -0.4375, 0.375, -0.375, -0.125},
+		}
+	},
+
+})
+
+core.register_craft({
+	output = "mycastle:stairs 3",
+	recipe = {
+			{"","","mycastle:castle_wood"},
+			{"","mycastle:castle_wood",""},
+			{"mycastle:castle_wood","","mycastle:castle_wood"},
+			}
+})
+
+core.register_node("mycastle:window_sil", {
+	description = "Window Sil",
+	tiles = {
+			"mycastle_concrete_block.png",
+			},
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {choppy = 2},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, 0.1875, 0.5, -0.25, 0.5},
+		}
+	},
+	on_place = core.rotate_node,
+})
+core.register_craft({
+	output = "mycastle:window_sil 4",
+	recipe = {
+			{"","",""},
+			{"","",""},
+			{"mycastle:concrete_block","mycastle:concrete_block","mycastle:concrete_block"},
+			}
+})
+core.register_node("mycastle:window_sil_wood", {
+	description = "Wood Window Sil",
+	tiles = {
+			"mycastle_wood2.png^[transformR90",
+			},
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {choppy = 2},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, 0.1875, 0.5, -0.25, 0.5},
+		}
+	},
+	on_place = core.rotate_node,
+})
+core.register_craft({
+	output = "mycastle:window_sil_wood 4",
+	recipe = {
+			{"","",""},
+			{"","",""},
+			{"mycastle:castle_wood","mycastle:castle_wood","mycastle:castle_wood"},
+			}
+})

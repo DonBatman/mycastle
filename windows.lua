@@ -154,3 +154,48 @@ core.register_craft({
 			{"","mycastle:concrete_block",""},
 			}
 })
+core.register_node("mycastle:window9", {
+	description = "Window 9",
+	tiles = {"mycastle_window6.png"},
+	drawtype = "glasslike",
+	paramtype = "light",
+	groups = {cracky = 2, oddly_breakable_by_hand = 2},
+})
+core.register_craft({
+	output = "mycastle:window9 9",
+	recipe = {
+			{"mycastle:dark_block","default:glass","mycastle:dark_block"},
+			{"default:glass","default:glass","default:glass"},
+			{"mycastle:dark_block","default:glass","mycastle:dark_block"},
+			}
+})
+core.register_node("mycastle:window10", {
+	description = "Window 10",
+	tiles = {"mycastle_window7.png"},
+	drawtype = "glasslike",
+	paramtype = "light",
+	groups = {cracky = 2, oddly_breakable_by_hand = 2},
+})
+core.register_craft({
+	output = "mycastle:window10 5",
+	recipe = {
+			{"mycastle:dark_brick","","mycastle:dark_brick"},
+			{"","default:glass",""},
+			{"mycastle:dark_brick","","mycastle:dark_brick"},
+			}
+})
+core.register_node("mycastle:window11", {
+	description = "Window 11",
+	tiles = {"mycastle_window8.png"},
+	drawtype = "glasslike",
+	paramtype = "light",
+	groups = {cracky = 2, oddly_breakable_by_hand = 2},
+})
+core.register_craft({
+	output = "mycastle:window11 9",
+	recipe = {
+			{"mycastle:dark_brick","mycastle:dark_brick","mycastle:dark_brick"},
+			{"mycastle:dark_brick","default:glass","mycastle:dark_brick"},
+			{"mycastle:dark_brick","mycastle:dark_brick","mycastle:dark_brick"},
+			}
+})
