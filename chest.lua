@@ -2,6 +2,7 @@ function minetest.get_myfurniture_formspec(pos)
     local spos = pos.x .. "," .. pos.y .. "," ..pos.z
     local formspec =
         "size[10,11]"..
+		"background[-0.15,-0.25;10.25,11.25;chest-background.png]"..
         "list[nodemeta:".. spos .. ";main;1,1;8,4;]"..
         "list[current_player;main;1,6;8,4;]"
     return formspec
