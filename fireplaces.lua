@@ -37,7 +37,7 @@ core.register_node("mycastle:fireplace1", {
     		core.remove_node(pos)
 	   		core.chat_send_player(name, ("Not enough room here to place the fireplace."))
 	   	else
-	   		core.set_node(np2, {name = "fire:permanent_flame"})
+	   		core.set_node(np, {name = "fire:permanent_flame"})
     	end
     end,
     	
