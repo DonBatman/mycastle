@@ -77,11 +77,23 @@ core.register_craft({
 core.register_node("mycastle:window6", {
 	description = "Window 6",
 	tiles = {"mycastle_shield2.png",},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_window6.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	node_box = {
+	selection_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, -0.0625, 0.5, -0.375, 0.0625},
+			{-0.5, 0.375, -0.0625, 0.5, 0.5, 0.0625},
+			{-0.5, -0.5, -0.0625, -0.375, 0.5, 0.0625},
+			{0.375, -0.5, -0.0625, 0.5, 0.5, 0.0625},
+			{0.125, -0.5, -0.0625, 0.1875, 0.5, 0.0625},
+			{-0.1875, -0.5, -0.0625, -0.125, 0.5, 0.0625},
+		}
+	},
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, -0.5, -0.0625, 0.5, -0.375, 0.0625},
@@ -104,11 +116,22 @@ core.register_craft({
 core.register_node("mycastle:window7", {
 	description = "Window 7",
 	tiles = {"mycastle_shield2.png",},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_window7.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	node_box = {
+	selection_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, -0.0625, 0.5, -0.375, 0.0625},
+			{-0.5, 0.375, -0.0625, 0.5, 0.5, 0.0625},
+			{-0.5, -0.5, -0.0625, -0.375, 0.5, 0.0625},
+			{0.375, -0.5, -0.0625, 0.5, 0.5, 0.0625},
+			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
+		}
+	},
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, -0.5, -0.0625, 0.5, -0.375, 0.0625},
@@ -130,11 +153,23 @@ core.register_craft({
 core.register_node("mycastle:window8", {
 	description = "Window 8",
 	tiles = {"mycastle_shield2.png",},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_window8.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	node_box = {
+	selection_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, -0.0625, 0.5, -0.375, 0.0625},
+			{-0.5, 0.375, -0.0625, 0.5, 0.5, 0.0625},
+			{-0.5, -0.5, -0.0625, -0.375, 0.5, 0.0625},
+			{0.375, -0.5, -0.0625, 0.5, 0.5, 0.0625},
+			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
+			{-0.5, -0.0625, -0.0625, 0.5, 0.0625, 0.0625},
+		}
+	},
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, -0.5, -0.0625, 0.5, -0.375, 0.0625},

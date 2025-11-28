@@ -2,34 +2,13 @@ minetest.register_node("mycastle:table", {
 	description = "Table",
 	tiles = {
 			"mycastle_wood.png",
-			"mycastle_wood.png",
-			"mycastle_wood.png^[transformR90",
-			"mycastle_wood.png^[transformR90",
-			"mycastle_wood.png^[transformR90",
-			"mycastle_wood.png^[transformR90",
 			},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_big_table.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	
-	node_box = {
-		type = "fixed",
-		fixed = {
-			{-0.5, 0.375, -0.5, 0.5, 0.4375, 0.5},
-			{-0.5, -0.5, -0.5, -0.375, 0.5, -0.375},
-			{0.375, -0.5, -0.5, 0.5, 0.5, -0.375},
-			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
-			{-0.5, -0.5, 0.375, -0.375, 0.5, 0.5},
-			{-0.4375, 0.375, -0.4375, 0.4375, 0.5, 0.4375},
-		},
-	},
-	selection_box = {
-		type = "fixed",
-		fixed = {
-			{-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
-		}
-	}
+
 })
 core.register_craft({
 	output = "mycastle:table",
@@ -85,34 +64,24 @@ minetest.register_node("mycastle:stand", {
 	description = "Stand",
 	tiles = {
 			"mycastle_wood.png",
-			"mycastle_wood.png",
-			"mycastle_wood.png^[transformR90",
-			"mycastle_wood.png^[transformR90",
-			"mycastle_wood.png^[transformR90",
-			"mycastle_wood.png^[transformR90",
 			},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_small_table.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	
-	node_box = {
-		type = "fixed",
-		fixed = {
-			{-0.5, 0.375, 0, 0.5, 0.4375, 0.5},
-			{-0.5, -0.5, 0, -0.375, 0.5, 0.125},
-			{0.375, -0.5, 0, 0.5, 0.5, 0.125},
-			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
-			{-0.5, -0.5, 0.375, -0.375, 0.5, 0.5},
-			{-0.4375, 0.375, 0.0625, 0.4375, 0.5, 0.4375},
-		},
-	},
 	selection_box = {
 		type = "fixed",
 		fixed = {
-			{-0.5, -0.5, 0, 0.5, 0.5, 0.5},
+			{-0.5, -0.5, 0.125, 0.5, 0.5, 0.5},
 		}
-	}
+	},
+	collision_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, 0.125, 0.5, 0.5, 0.5},
+		}
+	},
 })
 core.register_craft({
 	output = "mycastle:stand 2",
@@ -242,7 +211,8 @@ core.register_craft({
 })
 core.register_node("mycastle:small_stand", {
 	description = "Small Stand",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_stand_sm.obj",
 	tiles = {
 			"mycastle_wood2.png",
 			},
@@ -250,17 +220,7 @@ core.register_node("mycastle:small_stand", {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	groups = {cracky = 2, choppy = 2},
-	node_box = {
-		type = "fixed",
-		fixed = {
-			{-0.25, 0.375, -0.375, 0.25, 0.5, 0.375},
-			{-0.3125, 0.375, -0.3125, 0.3125, 0.5, 0.3125},
-			{-0.375, 0.375, -0.25, 0.375, 0.5, 0.25},
-			{-0.0625, -0.5, -0.0625, 0.0625, 0.375, 0.0625},
-			{-0.0625, -0.5, -0.375, 0.0625, -0.375, 0.375},
-			{-0.375, -0.5, -0.0625, 0.375, -0.375, 0.0625},
-		}
-	},
+
 
 })
 core.register_craft({

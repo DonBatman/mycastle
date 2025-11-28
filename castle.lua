@@ -3,26 +3,24 @@ core.register_node("mycastle:bars", {
 	tiles = {
 			"mycastle_bars2.png",
 			},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_bars.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	
-	node_box = {
-		type = "fixed",
-		fixed = {
-			{-0.5, -0.5, 0, -0.4375, 0.5, 0.0625},
-			{-0.25, -0.5, 0, -0.1875, 0.5, 0.0625},
-			{0, -0.5, 0, 0.0625, 0.5, 0.0625},
-			{0.25, -0.5, 0, 0.3125, 0.5, 0.0625},
-		},
-	},
+
 	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, -0.5, 0, 0.5, 0.5, 0.0625},
 		}
-	}
+	},
+	collision_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, 0, 0.5, 0.5, 0.0625},
+		}
+	},
 })
 core.register_craft({
 	output = "mycastle:bars",
@@ -37,25 +35,19 @@ core.register_node("mycastle:cross_bars", {
 	tiles = {
 			"mycastle_bars2.png",
 			},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_crossbars.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	
-	node_box = {
+
+	selection_box = {
 		type = "fixed",
 		fixed = {
-			{-0.5, -0.5, 0.4375, 0.5, -0.4375, 0.5},
-			{-0.5, -0.5, 0.125, 0.5, -0.4375, 0.1875},
-			{-0.5, -0.5, -0.1875, 0.5, -0.4375, -0.125},
-			{0.4375, -0.5, -0.5, 0.5, -0.4375, 0.5},
-			{-0.5, -0.5, -0.5, 0.5, -0.4375, -0.4375},
-			{-0.5, -0.5, -0.5, -0.4375, -0.4375, 0.5},
-			{-0.1875, -0.5, -0.5, -0.125, -0.4375, 0.5},
-			{0.125, -0.5, -0.5, 0.1875, -0.4375, 0.5},
-		},
+			{-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+		}
 	},
-	selection_box = {
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
@@ -331,28 +323,24 @@ core.register_node("mycastle:fence", {
 	tiles = {
 			"mycastle_fence.png",
 			},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_fence.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	
-	node_box = {
-		type = "fixed",
-		fixed = {
-			{-0.4375, -0.5, 0.375, -0.375, 0.5, 0.4375},
-			{-0.1875, -0.5, 0.375, -0.125, 0.5, 0.4375},
-			{0.0625, -0.5, 0.375, 0.125, 0.5, 0.4375},
-			{0.3125, -0.5, 0.375, 0.375, 0.5, 0.4375},
-			{-0.5, 0.125, 0.375, 0.5, 0.1875, 0.4375},
-			{-0.5, -0.375, 0.375, 0.5, -0.3125, 0.4375},
-		},
-	},
+
 	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, -0.5, 0.375, 0.5, 0.5, 0.4375},
 		}
-	}
+	},
+	collision_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, 0.375, 0.5, 0.5, 0.4375},
+		}
+	},
 })
 core.register_craft({
 	output = "mycastle:fence",
@@ -367,32 +355,24 @@ core.register_node("mycastle:fence_top", {
 	tiles = {
 			"mycastle_fence.png",
 			},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_fence_top.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
 	
-	node_box = {
-		type = "fixed",
-		fixed = {
-			{-0.4375, -0.5, 0.375, -0.375, 0.5, 0.4375},
-			{-0.5, 0.25, 0.3125, -0.3125, 0.375, 0.5},
-			{-0.1875, -0.5, 0.375, -0.125, 0.5, 0.4375},
-			{0.0625, -0.5, 0.375, 0.125, 0.5, 0.4375},
-			{0.3125, -0.5, 0.375, 0.375, 0.5, 0.4375},
-			{-0.25, 0.25, 0.3125, -0.0625, 0.375, 0.5},
-			{0, 0.25, 0.3125, 0.1875, 0.375, 0.5},
-			{0.25, 0.25, 0.3125, 0.4375, 0.375, 0.5},
-			{-0.5, 0.125, 0.375, 0.5, 0.1875, 0.4375},
-			{-0.5, -0.375, 0.375, 0.5, -0.3125, 0.4375},
-		},
-	},
 	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, -0.5, 0.375, 0.5, 0.5, 0.4375},
 		}
-	}
+	},	
+	collision_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, 0.375, 0.5, 0.5, 0.4375},
+		}
+	},
 })
 core.register_craft({
 	output = "mycastle:fence_top",
@@ -405,33 +385,21 @@ core.register_craft({
 core.register_node("mycastle:shield", {
 	description = "Shield",
 	tiles = {
-			"mycastle_shield.png^[transformR90",
-			"mycastle_shield2.png",
-			"mycastle_shield2.png",
-			"mycastle_shield2.png",
-			"mycastle_shield2.png",
 			"mycastle_shield2.png",
 			},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_shield.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	
-	node_box = {
+
+	selection_box = {
 		type = "fixed",
 		fixed = {
-			{-0.5, -0.5, -0.0625, 0.5, -0.4375, 0.0625},
-			{-0.4375, -0.5, -0.125, 0.4375, -0.4375, 0.125},
-			{-0.375, -0.5, -0.1875, 0.375, -0.4375, 0.1875},
-			{-0.3125, -0.5, -0.25, 0.3125, -0.4375, 0.25},
-			{-0.3125, -0.5, -0.3125, 0.25, -0.4375, 0.3125},
-			{-0.375, -0.5, 0.3125, 0.1875, -0.4375, 0.375},
-			{-0.375, -0.5, -0.375, 0.1875, -0.4375, -0.3125},
-			{-0.4375, -0.5, -0.4375, 0.125, -0.4375, -0.375},
-			{-0.4375, -0.5, 0.375, 0.125, -0.4375, 0.4375},
-		},
+			{-0.5, -0.5, -0.4375, 0.5, -0.4375, 0.4375},
+		}
 	},
-	selection_box = {
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, -0.5, -0.4375, 0.5, -0.4375, 0.4375},
@@ -450,30 +418,24 @@ core.register_craft({
 core.register_node("mycastle:sword", {
 	description = "Sword",
 	tiles = {
-			"mycastle_sword.png^[transformR90",
-			"mycastle_sword.png^[transformR90",
-			"mycastle_sword.png",
-			"mycastle_sword.png^[transformR180",
-			"mycastle_sword.png^[transformR270",
-			"mycastle_sword.png^[transformR90",
+			"mycastle_bars.png",
 			},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_sword.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	
-	node_box = {
-		type = "fixed",
-		fixed = {
-			{-0.5, -0.5, 0, 0.5, -0.4375, 0.0625},
-			{-0.4375, -0.5, -0.0625, 0.5, -0.4375, 0.125},
-			{0.1875, -0.5, -0.1875, 0.25, -0.4375, 0.25},
-		},
-	},
+
 	selection_box = {
 		type = "fixed",
 		fixed = {
-			{-0.5, -0.5, -0.1875, 0.5, -0.4375, 0.1875},
+			{-0.1875, -0.5, -0.5, 0.1875, -0.4375, 0.5},
+		}
+	},
+	collision_box = {
+		type = "fixed",
+		fixed = {
+			{-0.1875, -0.5, -0.5, 0.1875, -0.4375, 0.5},
 		}
 	},
 	on_place = core.rotate_node

@@ -148,12 +148,13 @@ core.register_craft({
 minetest.register_node("mycastle:fire_bowl", {
 	description = "Fire Bowl",
 	tiles = {"mycastle_wood.png"},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_firebowl.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	light_source =  14,
-	groups = {cracky = 2, oddly_breakable_by_hand = 2,not_in_creative_inventory=1},
-	node_box = {
+	groups = {cracky = 2, oddly_breakable_by_hand = 2,not_in_creative_inventory=0},
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, 0.375, -0.5, 0.5, 0.5, 0.5},
