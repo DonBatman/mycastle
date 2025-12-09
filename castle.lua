@@ -342,11 +342,43 @@ core.register_node("mycastle:fence", {
 		}
 	},
 })
+core.register_node("mycastle:fence_corner", {
+	description = "Fence Corner",
+	tiles = {
+			"mycastle_fence.png",
+			},
+	drawtype = "mesh",
+	mesh = "mycastle_fence_corner.obj",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2, oddly_breakable_by_hand = 2},
+
+	selection_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, 0.375, 0.5, 0.5, 0.4375},
+		}
+	},
+	collision_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, 0.375, 0.5, 0.5, 0.4375},
+		}
+	},
+})
 core.register_craft({
 	output = "mycastle:fence",
 	recipe = {
 			{"default:steel_ingot","","default:steel_ingot"},
 			{"default:steel_ingot","dye:black","default:steel_ingot"},
+			{"","",""},
+			}
+})
+core.register_craft({
+	output = "mycastle:fence_corner",
+	recipe = {
+			{"mycastle:fence","",""},
+			{"mycastle:fence","",""},
 			{"","",""},
 			}
 })
@@ -374,11 +406,43 @@ core.register_node("mycastle:fence_top", {
 		}
 	},
 })
+core.register_node("mycastle:fence_top_corner", {
+	description = "Fence Top Corner",
+	tiles = {
+			"mycastle_fence.png",
+			},
+	drawtype = "mesh",
+	mesh = "mycastle_fence_top_corner.obj",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2, oddly_breakable_by_hand = 2},
+	
+	selection_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, 0.375, 0.5, 0.5, 0.4375},
+		}
+	},	
+	collision_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, 0.375, 0.5, 0.5, 0.4375},
+		}
+	},
+})
 core.register_craft({
 	output = "mycastle:fence_top",
 	recipe = {
 			{"default:steel_ingot","default:steel_ingot","default:steel_ingot"},
 			{"default:steel_ingot","dye:black","default:steel_ingot"},
+			{"","",""},
+			}
+})
+core.register_craft({
+	output = "mycastle:fence_top_corner",
+	recipe = {
+			{"mycastle:fence_top","",""},
+			{"mycastle:fence_top","",""},
 			{"","",""},
 			}
 })
