@@ -58,7 +58,8 @@ end
 
 core.register_node("mycastle:rail_stairs_right", {
 	description = "Right Stair Rail",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_rail_stairs_right.obj",
 	tiles = {
 			"mycastle_wood.png",
 			},
@@ -66,7 +67,7 @@ core.register_node("mycastle:rail_stairs_right", {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	groups = {cracky = 2, choppy = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -1, -0.125, 0.5, -0.0625, 0},
@@ -86,7 +87,8 @@ core.register_node("mycastle:rail_stairs_right", {
 })
 core.register_node("mycastle:rail_stairs_left", {
 	description = "Left Stair Rail",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_rail_stairs_left.obj",
 	tiles = {
 			"mycastle_wood.png",
 			},
@@ -94,7 +96,7 @@ core.register_node("mycastle:rail_stairs_left", {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	groups = {cracky = 2, choppy = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.375, -1, -0.125, -0.5, -0.0625, 0},
@@ -114,7 +116,8 @@ core.register_node("mycastle:rail_stairs_left", {
 })
 core.register_node("mycastle:rail", {
 	description = "Rail",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_rail.obj",
 	tiles = {
 			"mycastle_wood.png",
 			},
@@ -122,15 +125,10 @@ core.register_node("mycastle:rail", {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	groups = {cracky = 2, choppy = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
-			{-0.375, -0.5, 0.375, -0.25, 0.5, 0.5},
-			{0.25, -0.5, 0.375, 0.375, 0.5, 0.5},
-			{-0.5, 0.3125, 0.375, 0.5, 0.5, 0.5},
-			{-0.375, -0.3125, 0.375, 0.375, -0.1875, 0.5},
-			{0.0625, -0.3125, 0.375, 0.125, 0.3125, 0.5},
-			{-0.125, -0.3125, 0.375, -0.0625, 0.3125, 0.5},
+			{-0.5, -0.5, 0.375, 0.5, 0.5, 0.5},
 		}
 	},
 

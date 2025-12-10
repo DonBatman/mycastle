@@ -68,12 +68,13 @@ core.register_node("mycastle:castle_top", {
 	tiles = {
 			"mycastle_bars.png",
 			},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_castle_top.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
 	
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, -0.5, 0, -0.25, 0.5, 0.5},
@@ -95,12 +96,13 @@ core.register_node("mycastle:castle_top_corner", {
 	tiles = {
 			"mycastle_bars.png",
 			},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_castle_top_corner.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
 	
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, -0.5, -0.5, 0, 0.5, 0.5},
@@ -121,12 +123,13 @@ core.register_node("mycastle:castle_top_inside_corner", {
 	tiles = {
 			"mycastle_bars.png",
 			},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_castle_top_inside_corner.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
 	
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, -0.5, 0, 0, 0.5, 0.5},
@@ -146,12 +149,13 @@ core.register_node("mycastle:archer_hole", {
 	tiles = {
 			"mycastle_bars.png",
 			},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_archer_hole.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
 	
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, -0.5, -0.25, -0.25, 0.5, 0.25},
@@ -174,12 +178,13 @@ core.register_node("mycastle:arch", {
 	tiles = {
 			"mycastle_bars.png",
 			},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_arch.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
 	
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, -0.5, -0.5, 0.5, 0, 0.5},
@@ -205,12 +210,13 @@ core.register_node("mycastle:arch_side", {
 	tiles = {
 			"mycastle_bars.png",
 			},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_arch_side.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
 	
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, -0.5, -0.5, 0.5, 0, 0.5},
@@ -287,28 +293,19 @@ core.register_craft({
 core.register_node("mycastle:red_flag", {
 	description = "Red Flag",
 	tiles = {
-			"mycastle_flag.png^[transformR270",
-			"mycastle_flag.png",
-			"mycastle_flag_right.png",
-			"mycastle_flag_pole.png^[transformR180",
-			"mycastle_flag.png^[transformR180",
 			"mycastle_flag.png",
 			},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_flag.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
 	
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, -0.5, -0.125, -0.3125, 0.5, 0.0625},
-			{-0.3125, 0.125, -0.0625, -0.125, 0.5, 0},
-			{-0.1875, 0.125, -0.125, 0, 0.5, -0.0625},
-			{-0.0625, 0.1875, -0.0625, 0.125, 0.4375, 0},
-			{0.0625, 0.1875, 0, 0.25, 0.4375, 0.0625},
-			{0.1875, 0.1875, -0.0625, 0.375, 0.4375, 0},
-			{0.3125, 0.25, -0.125, 0.5, 0.375, -0.0625},
+			{-0.5, 0.125, -0.0625, 0.5, 0.5, 0},
 		},
 	},
 })
@@ -514,7 +511,8 @@ core.register_craft({
 })
 core.register_node("mycastle:banner_top", {
 	description = "Banner Top",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_banner_top.obj",
 	tiles = {
 			"mycastle_banner.png"
 			},
@@ -522,7 +520,7 @@ core.register_node("mycastle:banner_top", {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	groups = {cracky = 2, choppy = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.3125, -0.5, 0.4375, 0.3125, 0.5, 0.5},
@@ -540,7 +538,8 @@ core.register_craft({
 })
 core.register_node("mycastle:banner_bottom", {
 	description = "Banner Bottom",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_banner_bottom.obj",
 	tiles = {
 			"mycastle_banner.png",
 			},
@@ -548,18 +547,10 @@ core.register_node("mycastle:banner_bottom", {
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	groups = {cracky = 2, choppy = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
-			{-0.3125, -0.5, 0.4375, -0.25, 0.5, 0.5},
-			{0.25, -0.5, 0.4375, 0.3125, 0.5, 0.5},
-			{-0.25, -0.375, 0.4375, -0.1875, 0.5, 0.5},
-			{0.1875, -0.375, 0.4375, 0.25, 0.5, 0.5},
-			{0.125, -0.25, 0.4375, 0.1875, 0.5, 0.5},
-			{-0.1875, -0.25, 0.4375, -0.125, 0.5, 0.5},
-			{-0.125, -0.125, 0.4375, -0.0625, 0.5, 0.5},
-			{0.0625, -0.125, 0.4375, 0.125, 0.5, 0.5},
-			{-0.0625, 0, 0.4375, 0.0625, 0.5, 0.5},
+			{-0.3125, -0.5, 0.4375, 0.3125, 0.5, 0.5},
 		}
 	},
 
@@ -575,20 +566,30 @@ core.register_craft({
 
 minetest.register_node("mycastle:stairs", {
 	description = "Stairs",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_stairs.obj",
 	tiles = {
-			"mycastle_wood.png^[transformR90",
-			"mycastle_wood.png",
-			"mycastle_wood.png",
-			"mycastle_wood.png",
-			"mycastle_wood.png",
 			"mycastle_wood.png",
 			},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	groups = {cracky=2},
-	node_box = {
+	selection_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.375, -0.5, 0.5, -0.3125, -0.1875},
+			{-0.5, -0.125, -0.1875, 0.5, -0.0625, 0.125},
+			{-0.5, 0.125, 0.125, 0.5, 0.1875, 0.5},
+			{-0.375, -0.5, 0.1875, -0.3125, 0.1875, 0.4375},
+			{0.3125, -0.5, 0.1875, 0.375, 0.1875, 0.4375},
+			{0.3125, -0.5, -0.125, 0.375, -0.0625, 0.1875},
+			{-0.375, -0.5, -0.125, -0.3125, -0.0625, 0.1875},
+			{-0.375, -0.5, -0.4375, -0.3125, -0.375, -0.125},
+			{0.3125, -0.5, -0.4375, 0.375, -0.375, -0.125},
+		}
+	},
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, -0.375, -0.5, 0.5, -0.3125, -0.1875},
@@ -663,4 +664,22 @@ core.register_craft({
 			{"","",""},
 			{"mycastle:castle_wood","mycastle:castle_wood","mycastle:castle_wood"},
 			}
+})
+core.register_node("mycastle:bricks", {
+	description = "Wood Window Sil",
+	tiles = {
+			"brick.png",
+			},
+	drawtype = "mesh",
+	mesh = "brick.obj",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {choppy = 2},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, 0.1875, 0.5, -0.25, 0.5},
+		}
+	},
+	on_place = core.rotate_node,
 })

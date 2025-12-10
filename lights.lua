@@ -52,38 +52,19 @@ core.register_craft({
 minetest.register_node("mycastle:torch_sconce", {
 	description = "Torch Sconce",
 	tiles = {
-		{name="mycastle_torch_top.png", animation={type="vertical_frames",
-		aspect_w=16, aspect_h=16, length=0.5}},
-		"mycastle_torch_bottom.png",
-		{name="mycastle_torch_side.png", animation={type="vertical_frames",
-		aspect_w=16, aspect_h=16, length=0.5}},
-		{name="mycastle_torch_side.png", animation={type="vertical_frames",
-		aspect_w=16, aspect_h=16, length=0.5}},
-		{name="mycastle_torch_side.png", animation={type="vertical_frames",
-		aspect_w=16, aspect_h=16, length=0.5}},
-		{name="mycastle_torch_side.png", animation={type="vertical_frames",
+		{name="mycastle_sconce.png", animation={type="vertical_frames",
 		aspect_w=16, aspect_h=16, length=0.5}},
 	},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_sconce.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	light_source =  14,
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
-			{-0.1875, -0.375, 0.375, 0.1875, 0, 0.5},
-			{-0.1875, 0.125, -0.125, 0.1875, 0.3125, 0.125},
-			{-0.125, 0.125, -0.1875, 0.125, 0.3125, 0.1875},
-			{-0.125, 0.25, -0.0625, 0.125, 0.4375, 0.0625},
-			{-0.0625, 0.25, -0.125, 0.0625, 0.4375, 0.125},
-			{-0.0625, 0.4375, -0.0625, 0.0625, 0.5, 0.0625},
-			{-0.25, 0, -0.1875, 0.25, 0.125, 0.1875},
-			{-0.1875, 0, -0.25, 0.1875, 0.125, 0.25},
-			{-0.0625, -0.25, -0.125, 0.0625, 0.125, 0.125},
-			{-0.125, -0.25, -0.0625, 0.125, 0.125, 0.1875},
-			{-0.125, -0.25, -0.0625, 0.125, -0.125, 0.375},
-			{-0.0625, -0.3125, -0.0625, 0.0625, -0.0625, 0.375},
+			{-0.25, -0.25, -0.5, 0.25, 0.5, 0.25},
 		}
 	}
 })
@@ -98,42 +79,19 @@ core.register_craft({
 minetest.register_node("mycastle:chandelier", {
 	description = "Chandelier",
 	tiles = {
-		{name="mycastle_chandelier_top.png", animation={type="vertical_frames",
-		aspect_w=16, aspect_h=16, length=0.5}},
-		"mycastle_chandelier_bottom.png",
-		{name="mycastle_chandelier_side.png", animation={type="vertical_frames",
-		aspect_w=16, aspect_h=16, length=0.5}},
-		{name="mycastle_chandelier_side.png", animation={type="vertical_frames",
-		aspect_w=16, aspect_h=16, length=0.5}},
-		{name="mycastle_chandelier_side.png", animation={type="vertical_frames",
-		aspect_w=16, aspect_h=16, length=0.5}},
-		{name="mycastle_chandelier_side.png", animation={type="vertical_frames",
+		{name="mycastle_chandelier.png", animation={type="vertical_frames",
 		aspect_w=16, aspect_h=16, length=0.5}},
 	},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mycastle_chandelier.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	light_source =  14,
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
-			{-0.0625, -0.5, -0.5, 0.0625, -0.4375, 0.5},
-			{-0.25, -0.5, -0.5, -0.125, 0, -0.375},
-			{0.125, -0.5, 0.375, 0.25, 0, 0.5},
-			{-0.5, -0.5, -0.25, -0.375, 0, -0.125},
-			{0.375, -0.5, -0.25, 0.5, 0, -0.125},
-			{-0.5, -0.5, -0.0625, 0.5, -0.4375, 0.0625},
-			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
-			{-0.1875, 0.375, -0.1875, 0.1875, 0.5, 0.1875},
-			{-0.25, -0.5, -0.5, 0.25, -0.4375, -0.375},
-			{0.125, -0.5, -0.5, 0.25, 0, -0.375},
-			{-0.25, -0.5, 0.375, -0.125, 0, 0.5},
-			{-0.25, -0.5, 0.375, 0.25, -0.4375, 0.5},
-			{-0.5, -0.5, 0.125, -0.375, 0, 0.25},
-			{-0.5, -0.5, -0.25, -0.375, -0.4375, 0.25},
-			{0.375, -0.5, 0.125, 0.5, 0, 0.25},
-			{0.375, -0.5, -0.25, 0.5, -0.4375, 0.25},
+			{-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
 		}
 	}
 })
