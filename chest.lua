@@ -1,8 +1,8 @@
-function minetest.get_myfurniture_formspec(pos)
+function minetest.get_mycastle_formspec(pos)
     local spos = pos.x .. "," .. pos.y .. "," ..pos.z
     local formspec =
         "size[10,11]"..
-		"background[-0.15,-0.25;10.25,11.25;chest-background.png]"..
+		"background[-0.15,-0.25;10.25,11.25;mycastle_chest_background.png]"..
         "list[nodemeta:".. spos .. ";main;1,1;8,4;]"..
         "list[current_player;main;1,6;8,4;]"
     return formspec
@@ -60,7 +60,7 @@ minetest.register_node("mycastle:chest", {
             minetest.show_formspec(
                 clicker:get_player_name(),
                 "mycastle:chest",
-                minetest.get_myfurniture_formspec(pos)
+                minetest.get_mycastle_formspec(pos)
             )
     end,
 })
