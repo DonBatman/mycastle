@@ -277,9 +277,9 @@ core.register_node("mycastle:drawbridge_down_large",{
 		end
 		if can_place then
 			local success = core.set_node(pos, {name="mycastle:drawbridge_down_large", param2 = param2})
-
+			itemstack:take_item(1)
 			if success then
-				minetest.after(0, function()
+				core.after(0, function()
 					local current_node = core.get_node(pos)
 					if current_node.name == "mycastle:drawbridge_down_large" then
 						local current_par = current_node.param2

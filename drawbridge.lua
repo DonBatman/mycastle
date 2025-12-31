@@ -221,7 +221,7 @@ core.register_node("mycastle:drawbridge_down",{
 		end
 		if can_place then
 			local success = core.set_node(pos, {name="mycastle:drawbridge_down", param2 = param2})
-
+			itemstack:take_item(1)
 			if success then
 				minetest.after(0, function()
 					local current_node = core.get_node(pos)
@@ -230,7 +230,6 @@ core.register_node("mycastle:drawbridge_down",{
 
 						core.set_node(pos, {name="air"})
 						core.set_node(pos, {name="mycastle:drawbridge_down", param2 = current_par})
-
 						for i, base_offset in ipairs(down_offsets) do
 							local rotated_offset = get_rotated_offset(base_offset, current_par)
 							local target_pos = vector.add(pos, rotated_offset)
