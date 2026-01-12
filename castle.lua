@@ -666,7 +666,7 @@ core.register_craft({
 			}
 })
 core.register_node("mycastle:bricks", {
-	description = "Wood Window Sil",
+	description = "Bricks",
 	tiles = {
 			"brick.png",
 			},
